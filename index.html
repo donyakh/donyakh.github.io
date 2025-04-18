@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AI and Computer Vision Scientist - Résumé for Donya Khaledyan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donya Khaledyan - Resume</title>
+  <!-- Google Font Import -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+    /* Base resets and body styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #333;
+      color: #f5f5f5;
+      line-height: 1.6;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Sticky navigation bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #0fc451;
+    }
+
+    /* Container to center content on wider screens */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 80px; /* Extra bottom padding for scroll-to-top button */
+    }
+
+    /* Header section */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    header h1 {
+      color: #007BFF;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    /* Profile image */
+    .profile-image {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    /* Common section styling */
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      color: #0062cc;
+      font-size: 1.5rem;
+      margin: 30px 0 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #0062cc;
+    }
+
+    /* Content spacing */
+    section p,
+    section ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    section ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Sub-headers (Experience, etc.) */
+    h3 {
+      color: #0fc451;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    /* Skills styling */
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      margin-left: 20px;
+    }
+
+    .skills-list li {
+      margin-bottom: 20px;
+    }
+
+    .skill-label {
+      background-color: #007BFF;
+      color: #2b2727;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .bar-container {
+      width: 100%;
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+      /* transition for animation effect */
+      transition: background-color 0.3s;
+    }
+
+    .bar {
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #0fc451;
+      /* animate skill bar fill */
+      transition: width 1s ease-in-out;
+    }
+
+    /* Hover effect for skill container (optional) */
+    .bar-container:hover {
+      background-color: #555;
+    }
+
+    /* Link styling */
+    a {
+      color: #0fc451;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #00a851;
+    }
+
+    /* Scroll-to-top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0fc451;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      display: none; /* Hidden by default; shown with JS */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s;
+    }
+    .scroll-to-top:hover {
+      background-color: #009b3f;
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .profile-image {
+        position: static;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+      .navbar {
+        flex-wrap: wrap;
+      }
+      .navbar a {
+        margin: 5px;
+      }
+      .section-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#proficiency">Proficiency</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#teaching">Teaching</a>
+  </nav>
+
+
+  <div class="container">
+    <header>
+      <h1>Donya Khaledyan</h1>
+      <p>Rochester, NY | dkhaledy@ur.rochester.edu</p>
+    </header>
+
+    <!-- FIND ME -->
+    <section>
+      <h2 class="section-title">Find Me</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/donya-khaledyan-b15623108/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?user=jf_nkiEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li><a href="https://github.com/donyakh" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section id="summary">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        AI and Computer Vision Scientist with 6+ years of experience specializing in deep learning, 
+        computational imaging, hardware design, and model optimization (hardware and software). Expertise in image processing, signal processing, 
+        and medical imaging workflows, with hands-on experience in FPGA and hardware implementation, and real-time algorithm development. Proven track record of building scalable AI systems 
+        and integrating ML/GenAI into clinical pipelines. Strong background in multimodal deep learning, 
+        generative AI (GANs, VAEs, Diffusion Models), and optimization techniques.
+      </p>
+    </section>
+
+    <!-- KEY SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Key Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Python, MATLAB, C, VHDL, Verilog, Assembly.</li>
+        <li><strong>Data Science & HPC:</strong> TensorFlow, PyTorch, Pandas, CUDA, cuDNN, Slurm.</li>
+        <li><strong>Deep Learning & AI:</strong> CNNs, NLP (RNN, LSTM, Transformers), LLMs (Llama, BERT, GPT), Generative AI (GANs, VAEs, Transformers, Diffusions), Multimodal AI.</li>
+        <li><strong>Machine Learning:</strong> KNN, SVM, Decision Trees, Random Forest, Bayesian Networks.</li>
+        <li><strong>Computer Vision:</strong> Scikit-Image, OpenCV, MATLAB Image Toolboxes, 3D vision models (3D UNet, V-Net, SLAM, stereo matching, NeRFs).</li>
+        <li><strong>Optimization:</strong> Quantization, knowledge distillation, pruning, CUDA kernel optimization, ONNX, TensorRT, OpenVINO.</li>
+        <li><strong>Hardware Acceleration:</strong> FPGA implementation, real-time hardware systems, edge computing.</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS PROFICIENCY -->
+<section id="proficiency">
+  <h2 class="section-title">Skills Proficiency</h2>
+  <div class="skills-grid">
+    <div class="skill-pair">
+      <div class="skill-item">
+        <span class="skill-label">Python</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 95%">95%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">PyTorch</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 90%">90%</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-pair">
+      <div class="skill-item">
+        <span class="skill-label">Keras</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 90%">80%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Deep Learning</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 90%">90%</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-pair">
+      <div class="skill-item">
+        <span class="skill-label">Multimodal AI</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 85%">75%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Signal Processing</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 85%">85%</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-pair">
+      <div class="skill-item">
+        <span class="skill-label">Computational Imaging</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 85%">95%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">NLP/LLM</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-pair">
+      <div class="skill-item">
+        <span class="skill-label">Hardware Systems</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 80%">80%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Computer Vision</span>
+        <div class="bar-container">
+          <div class="bar" style="width: 95%">95%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+  }
+  
+  .skill-pair {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .skill-item {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .bar-container {
+    height: 12px; /* Smaller bar height */
+    margin-top: 3px;
+  }
+  
+  .bar {
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+  }
+  
+  .skill-label {
+    font-size: 0.9em;
+    padding: 4px 8px;
+  }
+  
+  @media (max-width: 600px) {
+    .skill-pair {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <h3>Research Scientist Intern -- Meta Reality Labs | Redmond, WA | 05/2024 – 11/2024</h3>
+      <ul>
+        <li>Developed deep-learning models in PyTorch and Keras for polarization computational imaging in AR/MR/VR applications, improving reconstruction accuracy by 50% compared to SOTA baselines.</li>
+        <li>Optimized GANs, VAEs, ViTs, and diffusion models for high-fidelity image reconstruction (Demosaicing, Inpainting, Super-resolution).</li>
+        <li>Explored 3D rendering, digital twins, and depth estimation for VR applications.</li>
+        <li><strong>Key Skills:</strong> GANs, VAEs, ViTs, Diffusion Models, Polarization Imaging, Camera and Sensor Systems, HPC, Docker, 3D Reconstruction.</li>
+      </ul>
+
+      <h3>AI Researcher & Team Manager -- TECVICO | Vancouver, Canada | 05/2020 – 11/2021</h3>
+      <ul>
+        <li>Led a team of AI researchers to develop medical imaging models.</li>
+        <li>Designed and deployed CNN and transformer-based frameworks in Keras for healthcare anomaly detection.</li>
+        <li><strong>Key Skills:</strong> Team Management, System Design, Medical Imaging, Anomaly Detection.</li>
+      </ul>
+
+      <h3>PhD Research Assistant -- University of Rochester | 2022 – Present</h3>
+      <ul>
+        <li>Developed multimodal DL models in PyTorch for enhanced image-to-image translation in medical imaging (OCE imaging), improving model generalization by incorporating metadata.</li>
+        <li>Reconstructed brain stiffness maps from 3D shear wave data using GANs, ViTs, and Diffusion models, outperforming physics-based methods in accuracy, fidelity, and latency.</li>
+        <li>Designed ViT, diffusion, and UNet-based models for breast cancer segmentation in resource-limited settings.</li>
+        <li>Improved physics-based H-Scan ultrasound analysis for abnormality detection in biomedical imaging.</li>
+        <li><strong>Key Skills:</strong> DL, Multimodal DL, GenAI, Model Optimization, Signal Processing, Quanitative Imaging, OCT, Elastography, Ultrasound Data Acquisiotion, .</li>
+      </ul>
+
+      <h3>MSc Research Assistant -- Shahid Beheshti University | 2018 – 2022</h3>
+      <ul>
+        <li>Developed segmentation/classification algorithms for lung CT scans using classical ML and CNNs in MATLAB.</li>
+        <li>Implemented TensorFlow models for breast cancer detection from chest X-rays with transfer learning and explainability techniques.</li>
+        <li>Designed FPGA-based super-resolution and real-time stereo vision systems for autonomous vehicles (Master's Thesis).</li>
+        <li>Developed FPGA-accelerated iris recognition system achieving 60 FPS at 1.8W power with 0.1% error rate.</li>
+        <li><strong>Key Skills:</strong> ML, DL, Computer Vision, Computational Imaging, FPGA, VHDL, Verilog, OpenCV Optimization, Hardware Acceleration, Edge Computing.</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>Ph.D.</strong> Electrical & Computer Engineering | University of Rochester | 2022 – Present</li>
+        <li><strong>M.Sc.</strong> Electrical & Computer Engineering | University of Rochester | 2022 – 2023</li>
+        <li><strong>M.Sc.</strong> Electronics Digital Engineering | Shahid Beheshti University | 2018 – 2020</li>
+        <li><strong>B.Sc.</strong> Electrical & Computer Engineering | Shiraz University of Technology | 2014 – 2018</li>
+      </ul>
+    </section>
+
+    <!-- TEACHING EXPERIENCE -->
+   <!-- TEACHING EXPERIENCE -->
+<section id="teaching">
+  <h2 class="section-title">Teaching Experience</h2>
+  <h3>Teaching Assistant | University of Rochester & Shahid Beheshti University | 2020 – 2023</h3>
+  <ul>
+    <li>
+      Served as TA for several courses, strengthening technical communication skills and deepening subject mastery through teaching:
+      <strong>Medical Imaging, Signal Processing, FPGA, VLSI, Image Processing, Physics Electronics</strong>
+    </li>
+    <li>
+      <strong>Skills Developed:</strong> 
+      Conceptual reinforcement, adaptive instruction, curriculum development.
+    </li>
+  </ul>
+</section>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-to-top" id="scrollBtn">Top</button>
+
+  <script>
+    // Show scroll-to-top button when user scrolls down
+    const scrollBtn = document.getElementById('scrollBtn');
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    // Smoothly scroll to top
+    scrollBtn.onclick = function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+  </script>
+
+</body>
+</html>
