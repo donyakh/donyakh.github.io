@@ -256,7 +256,7 @@
     <section id="skills">
       <h2 class="section-title">Key Skills</h2>
       <ul>
-        <li><strong>Programming:</strong> Python, MATLAB, C, VHDL, Verilog, Assembly.</li>
+        <li><strong>Programming:</strong> Python, MATLAB, C, C++, VHDL, Verilog, Assembly.</li>
         <li><strong>Data Science & HPC:</strong> TensorFlow, PyTorch, Pandas, CUDA, cuDNN, Slurm.</li>
         <li><strong>Deep Learning & AI:</strong> CNNs, NLP (RNN, LSTM, Transformers), LLMs (Llama, BERT, GPT), Generative AI (GANs, VAEs, Transformers, Diffusions), Multimodal AI.</li>
         <li><strong>Machine Learning:</strong> KNN, SVM, Decision Trees, Random Forest, Bayesian Networks.</li>
@@ -393,29 +393,69 @@
     <section id="experience">
       <h2 class="section-title">Professional Experience</h2>
       
+      <h3>Specialized HW and ML Engineer Intern — Amazon Lab126 | Sunnyvale, CA | 06/2025 – 09/2025</h3>
+<ul>
+  <li><strong>Goal-driven, resource-constrained design:</strong> Proposed and delivered color-mixing/display-enhancement solutions optimized for the limited compute/memory/power budget on Kindle Scribe, prioritizing small, fast, and reliable models over heavyweight DL.</li>
+
+  <li><strong>Physics-based data engine:</strong> Generated a large, diverse synthetic dataset using physically inspired mixing, plus measured swatches, to cover pigments, paper textures, and stroke behaviors across the device gamut.</li>
+
+  <li><strong>Model selection under scaling:</strong> Benchmarked compact learners end-to-end:
+    <ul>
+      <li><em>Polynomial regression</em> as a strong classical baseline, but observed instability and poor scalability in feature dimensionality & dataset size (fit time, numerical conditioning).</li>
+      <li><em>Small MLPs</em> ( narrow width) emerged as the best accuracy–latency–memory trade-off, capturing nonlinearity without heavy runtime cost.</li>
+    </ul>
+  </li>
+
+
+  <li><strong>Full developement & deployment:</strong> PyTorch → C++ inference (LibTorch/OpenVINO paths), with static-shape configs, operator fusion, thread pooling, and memory reuse.</li>
+
+  <li><strong>Device integration:</strong> Embedded model into the Kindle Scribe pipeline with LUT export fallback, color-profile hooks, and guardrails for out-of-gamut inputs; exposed tunables for stroke sharpness and saturation ramp.</li>
+
+  <li><strong>User study impact:</strong> Post-integration UX tests showed clear user preference for the new models vs. legacy blending (higher perceived realism and faster color convergence), supporting rollout decisions.</li>
+
+  <li><strong>Key Outcomes:</strong> Production-ready, compact MLP models; physics-grounded data generation; complete PyTorch→C++ deployment; measurable UX wins on device.</li>
+</ul>
+
+
       <h3>Research Scientist Intern -- Meta Reality Labs | Redmond, WA | 05/2024 – 11/2024</h3>
-      <ul>
-        <li>Developed deep-learning models in PyTorch and Keras for polarization computational imaging in AR/MR/VR applications, improving reconstruction accuracy by 50% compared to SOTA baselines.</li>
-        <li>Optimized GANs, VAEs, ViTs, and diffusion models for high-fidelity image reconstruction (Demosaicing, Inpainting, Super-resolution).</li>
-        <li>Explored 3D rendering, digital twins, and depth estimation for VR applications.</li>
-        <li><strong>Key Skills:</strong> GANs, VAEs, ViTs, Diffusion Models, Polarization Imaging, Camera and Sensor Systems, HPC, Docker, 3D Reconstruction.</li>
-      </ul>
+<ul>
+  <li>Developed deep-learning models in PyTorch and Keras for polarization computational imaging in AR/MR/VR applications, improving reconstruction accuracy by 50% compared to SOTA baselines.</li>
+  <li>On raw and sparse RGB-polarization (DoFP) data, built a calibrated ISP (flat-field, cross-talk, Stokes→AoLP/DoLP) and optimized GAN/ VAE/ ViT/ diffusion models for joint demosaicing–depolarization, inpainting, and super-resolution, yielding higher-fidelity RGB-polar reconstructions with fewer artifacts compared to all the baselines.</li>
+
+  <li>3D rendering and digital twins using NeRF and 3D Gaussian Splatting, integrating polarization sensors/images (AoLP/DoLP) to enhance depth, surface normals, and material estimation for VR.</li>
+  <li><strong>Key Skills:</strong> NeRF, 3D Gaussian Splatting, Polarization Imaging, GANs, VAEs, ViTs, Diffusion Models, Camera & Sensor Systems, 3D Reconstruction, Depth Estimation, HPC, Docker.</li>
+</ul>
+
+
 
       <h3>AI Researcher & Team Manager -- TECVICO | Vancouver, Canada | 05/2020 – 11/2021</h3>
       <ul>
         <li>Led a team of AI researchers to develop medical imaging models.</li>
-        <li>Designed and deployed CNN and transformer-based frameworks in Keras for healthcare anomaly detection.</li>
+        <li>Designed and deployed CNN and transformer-based frameworks in Keras for healthcare anomaly detection.
+          <ul>
+            <li><strong>Head & Neck Cancer (MRI + CT):</strong> Built a multi-modal tumor segmentation and lymph-node detection pipeline (2.5D UNet/UNet++ + Swin-Transformer fusion) with deformable registration between MRI–CT; achieved oncologist-validated Dice improvements and integrated RT-structure exports (DICOM-RT) to assist radiation therapy planning and target delineation in clinical workflows.</li>
+            <li><strong>Breast Imaging (Photon-Counting CT & Conventional CT):</strong> Developed lesion detection and tissue-density quantification using RetinaNet/YOLOv8 for candidate generation and ViT-based classifiers for BI-RADS-style triage; supported second-read decision support and dose/protocol optimization in industry PACS pipelines.</li>
+            <li><strong>Anomaly Detection @ Scale:</strong> Deployed self-/weakly-supervised pretraining (SimCLR/MoCo, masked autoencoders) on mixed MRI/CT cohorts to flag out-of-distribution scans (artifacts, motion, protocol mismatch); used for worklist triage and automated QA in hospital imaging networks.</li>
+          </ul>
+        </li>
+        
         <li><strong>Key Skills:</strong> Team Management, System Design, Medical Imaging, Anomaly Detection.</li>
       </ul>
 
       <h3>PhD Research Assistant -- University of Rochester | 2022 – Present</h3>
       <ul>
-        <li>Developed multimodal DL models in PyTorch for enhanced image-to-image translation in medical imaging (OCE imaging), improving model generalization by incorporating metadata.</li>
-        <li>Reconstructed brain stiffness maps from 3D shear wave data using GANs, ViTs, and Diffusion models, outperforming physics-based methods in accuracy, fidelity, and latency.</li>
-        <li>Designed ViT, diffusion, and UNet-based models for breast cancer segmentation in resource-limited settings.</li>
-        <li>Improved physics-based H-Scan ultrasound analysis for abnormality detection in biomedical imaging.</li>
-        <li><strong>Key Skills:</strong> DL, Multimodal DL, GenAI, Model Optimization, Signal Processing, Quanitative Imaging, OCT, Elastography, Ultrasound Data Acquisiotion, .</li>
-      </ul>
+        <ul>
+          <li>Developed multimodal DL models in PyTorch for enhanced image-to-image translation in OCE (Optical Coherence Elastography), conditioning on acquisition metadata (e.g., scan depth, sampling rate, probe settings, tissue region) via FiLM/adapters and cross-attention. Reduced domain shift across devices/sites and improved generalization on held-out cohorts without extra labels.</li>
+        
+          <li>Reconstructed brain stiffness maps from 3D shear-wave data with GANs, ViTs, and diffusion models as learned inversions (vs. classical Helmholtz/phase-gradient methods). Achieved lower error and higher structural fidelity (MAE/SSIM) while cutting inference latency to enable near–real-time visualization and integrated per-voxel uncertainty for safer clinical interpretation.</li>
+        
+          <li>Designed ViT, diffusion, and UNet-family models for breast cancer segmentation under resource constraints: semi-/weakly-supervised learning with consistency training and pseudo-labels, class-imbalance handling, and deployment optimizations (ONNX/OpenVINO, INT8 quantization, pruning). Targeted low-memory edge workstations typical of screening/triage workflows.</li>
+        
+          <li>Improved physics-based H-Scan ultrasound analysis for abnormality detection by refining backscatter spectral-shift estimation, attenuation compensation, and band-limited matched filtering. Stabilized maps across depth/gain settings and combined physics features with DL heads for robust lesion highlighting.</li>
+        
+          <li><strong>Key Skills:</strong> Deep Learning (PyTorch), Multimodal DL, Generative Models (GAN/ViT/Diffusion), Model Optimization & Quantization (ONNX/OpenVINO/INT8), Signal Processing, Quantitative Imaging, OCT/OCE, Elastography, Ultrasound Data Acquisition, DICOM/Clinical Integration, Experimental Design & Validation.</li>
+        </ul>
+        
 
       <h3>MSc Research Assistant -- Shahid Beheshti University | 2018 – 2022</h3>
       <ul>
