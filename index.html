@@ -442,38 +442,103 @@
         <li><strong>Key Skills:</strong> Team Management, System Design, Medical Imaging, Anomaly Detection.</li>
       </ul>
 
-      <h3>PhD Research Assistant -- University of Rochester | 2022 – Present</h3>
+      <h3>PhD Research Assistant -- University of Rochester | 01/2022 – 11/2025</h3>
       <ul>
         <ul>
-          <li>Developed multimodal DL models in PyTorch for enhanced image-to-image translation in OCE (Optical Coherence Elastography), conditioning on acquisition metadata (e.g., scan depth, sampling rate, probe settings, tissue region) via FiLM/adapters and cross-attention. Reduced domain shift across devices/sites and improved generalization on held-out cohorts without extra labels.</li>
+          <li>Developed multimodal DL models in PyTorch for enhanced image-to-image translation in OCE (Optical Coherence Elastography), conditioning on acquisition metadata (e.g., scan depth, sampling rate, probe settings, tissue region, case age, awake/ sleep condition) via FiLM/adapters and cross-attention. Reduced domain shift across devices/sites and improved generalization on held-out cohorts without extra labels.</li>
         
           <li>Reconstructed brain stiffness maps from 3D shear-wave data with GANs, ViTs, and diffusion models as learned inversions (vs. classical Helmholtz/phase-gradient methods). Achieved lower error and higher structural fidelity (MAE/SSIM) while cutting inference latency to enable near–real-time visualization and integrated per-voxel uncertainty for safer clinical interpretation.</li>
         
           <li>Designed ViT, diffusion, and UNet-family models for breast cancer segmentation under resource constraints: semi-/weakly-supervised learning with consistency training and pseudo-labels, class-imbalance handling, and deployment optimizations (ONNX/OpenVINO, INT8 quantization, pruning). Targeted low-memory edge workstations typical of screening/triage workflows.</li>
         
-          <li>Improved physics-based H-Scan ultrasound analysis for abnormality detection by refining backscatter spectral-shift estimation, attenuation compensation, and band-limited matched filtering. Stabilized maps across depth/gain settings and combined physics features with DL heads for robust lesion highlighting.</li>
+          <li>Improved physics and signal processing based, H-Scan ultrasound analysis for abnormality detection by refining backscatter spectral-shift estimation, attenuation compensation, and band-limited matched filtering. Stabilized maps across depth/gain settings and combined physics features with DL heads for robust lesion highlighting.</li>
         
           <li><strong>Key Skills:</strong> Deep Learning (PyTorch), Multimodal DL, Generative Models (GAN/ViT/Diffusion), Model Optimization & Quantization (ONNX/OpenVINO/INT8), Signal Processing, Quantitative Imaging, OCT/OCE, Elastography, Ultrasound Data Acquisition, DICOM/Clinical Integration, Experimental Design & Validation.</li>
         </ul>
         
 
-      <h3>MSc Research Assistant -- Shahid Beheshti University | 2018 – 2022</h3>
-      <ul>
-        <li>Developed segmentation/classification algorithms for lung CT scans using classical ML and CNNs in MATLAB.</li>
-        <li>Implemented TensorFlow models for breast cancer detection from chest X-rays with transfer learning and explainability techniques.</li>
-        <li>Designed FPGA-based super-resolution and real-time stereo vision systems for autonomous vehicles (Master's Thesis).</li>
-        <li>Developed FPGA-accelerated iris recognition system achieving 60 FPS at 1.8W power with 0.1% error rate.</li>
-        <li><strong>Key Skills:</strong> ML, DL, Computer Vision, Computational Imaging, FPGA, VHDL, Verilog, OpenCV Optimization, Hardware Acceleration, Edge Computing.</li>
-      </ul>
-    </section>
+        <h3>MSc Research Assistant — Shahid Beheshti University | 09/2018–01/2021</h3>
+        <ul>
 
+          <li>
+            <strong>Master’s Thesis — FPGA Super-Resolution (SR):</strong>
+            Designed a fixed-point SR pipeline (deblurring → upsampling → refinement) on FPGA, using line buffers/BRAM tiling, DSP slice optimization, and AXI4-Stream DMA. Achieved stable timing closure at video rates; integrated camera input (MIPI/parallel) and LCD/HDMI output for on-device demos.
+          </li>
+          <li>
+            <strong>Real-Time Stereo Vision on FPGA platform:</strong>
+            Built a calibrated dual-camera pipeline (stereo <em>K, D, R, T</em>; rectification) and computed disparity using a
+            <em>graph-cut</em> energy model (E = data + λ·smoothness) with α-expansion/β-swap moves, robust Potts smoothness,
+            and occlusion handling via left–right consistency. Added sub-pixel refinement, median/bilateral filtering, and
+            speckle removal. Converted disparity to metric depth (<em>Z = f·B/d</em>) and reprojected (<em>Q</em> matrix) to a
+            colorized point cloud; downstream steps included plane/RANSAC fitting, normal estimation, and mesh reconstruction
+            (Poisson/Ball-Pivoting) with optional multi-frame alignment via ICP for obstacle/scene understanding. Achieved
+            <strong>real-time performance with high accuracy</strong> through parallelized cost-volume construction, and memory-aware scheduling—targeted for <strong>autonomous vehicle</strong> perception.
+          </li>
+
+
+          <li>
+            <strong>FPGA-accelerated iris recognition (embedded vision):</strong>
+            Implemented segmentation (integro-differential/Daugman), normalization, Gabor filtering, and template matching with
+            Hamming distance in fixed-point. Achieved <em>60 FPS</em> at <em>1.8 W</em> with a <em>0.1% error rate</em> via pipelined
+            architectures, resource sharing, and on-chip memory reuse.
+          </li>
+           
+          <li>
+            Built end-to-end lung CT pipelines in MATLAB: DICOM ingestion, resampling, lung/airway preprocessing, and
+            classical ML (SVM/Random Forest with radiomics) alongside CNN baselines (2.5D/3D UNet variants). Implemented
+            cross-validation, class-imbalance handling, and calibration to produce clinician-readable candidate lists.
+          </li>
+        
+          <li>
+            Developed TensorFlow transfer-learning models (ResNet/DenseNet backbones) for breast cancer detection on
+            chest X-rays with explainability (Integrated Gradients) and uncertainty estimates. Standardized CXR
+            preprocessing (de-identification, normalization, bone suppression) and reported FROC/sensitivity@FP consistent
+            with clinical evaluation practices.
+          </li>
+        
+        
+          <li>
+            Collaborated with clinicians/engineers to define labeling protocols, built reproducible training/eval scripts,
+            and packaged models for edge deployment (C/C++/OpenCV) with automated tests and documentation.
+          </li>
+        
+          <li>
+            <strong>Key Skills:</strong> Machine/Deep Learning (MATLAB, TensorFlow), 2D/2.5D/3D CNNs, Radiomics, Explainable AI,
+            Medical Image Processing (CT/CXR, DICOM), FPGA Design (VHDL/Verilog, HLS), Vivado/Quartus, Fixed-Point Quantization,
+            DSP/BRAM optimization, AXI4/DMAs, OpenCV Optimization, Real-time Embedded & Edge Computing.
+          </li>
+        </ul>
+        
+        <section id="publications">
+          <h3>Selected Publications (3 of 14)</h3>
+          <ul>
+            <li>
+              Khaledyan, Donya, <em>et&nbsp;al.</em> “WATUNet: a deep neural network for segmentation of volumetric sweep imaging ultrasound.”
+              <em>Machine Learning: Science and Technology</em> <strong>5</strong>(1), 015042 (2024).
+              <a href="https://www.google.com/search?q=WATUNet%3A+a+deep+neural+network+for+segmentation+of+volumetric+sweep+imaging+ultrasound+Machine+Learning%3A+Science+and+Technology+015042+2024" target="_blank" rel="noopener">View</a>
+            </li>
+        
+            <li>
+              Khaledyan, Donya, <em>et&nbsp;al.</em> “Enhancing breast ultrasound segmentation through fine-tuning and optimization techniques: Sharp Attention U-Net.”
+              <em>PLOS ONE</em> <strong>18</strong>(12): e0289195 (2023).
+              <a href="https://www.google.com/search?q=Enhancing+breast+ultrasound+segmentation+Sharp+Attention+UNet+PLOS+ONE+e0289195+2023" target="_blank" rel="noopener">View</a>
+            </li>
+        
+            <li>
+              Khaledyan, Donya, <em>et&nbsp;al.</em> “Low-cost implementation of bilinear and bicubic image interpolation for real-time image super-resolution.”
+              In: <em>Proc. IEEE Global Humanitarian Technology Conference (GHTC)</em>, 2020.
+              <a href="https://www.google.com/search?q=Low-cost+implementation+of+bilinear+and+bicubic+image+interpolation+for+real-time+image+super-resolution+GHTC+2020" target="_blank" rel="noopener">View</a>
+            </li>
+          </ul>
+        </section>
+        
     <!-- EDUCATION -->
     <section id="education">
       <h2 class="section-title">Education</h2>
       <ul>
-        <li><strong>Ph.D.</strong> Electrical & Computer Engineering | University of Rochester | 2022 – Present</li>
+        <li><strong>Ph.D.</strong> Electrical & Computer Engineering | University of Rochester | 2022 – 2025</li>
         <li><strong>M.Sc.</strong> Electrical & Computer Engineering | University of Rochester | 2022 – 2023</li>
-        <li><strong>M.Sc.</strong> Electronics Digital Engineering | Shahid Beheshti University | 2018 – 2020</li>
+        <li><strong>M.Sc.</strong> Electronics Digital Engineering | Shahid Beheshti University | 2018 – 2021</li>
         <li><strong>B.Sc.</strong> Electrical & Computer Engineering | Shiraz University of Technology | 2014 – 2018</li>
       </ul>
     </section>
