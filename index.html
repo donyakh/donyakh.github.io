@@ -434,9 +434,11 @@
         <li>Led a team of AI researchers to develop medical imaging models.</li>
         <li>Designed and deployed CNN and transformer-based frameworks in Keras for healthcare anomaly detection.
           <ul>
-            <li><strong>Head & Neck Cancer (MRI + CT):</strong> Built a multi-modal tumor segmentation and lymph-node detection pipeline (2.5D UNet/UNet++ + Swin-Transformer fusion) with deformable registration between MRI–CT; achieved oncologist-validated Dice improvements and integrated RT-structure exports (DICOM-RT) to assist radiation therapy planning and target delineation in clinical workflows.</li>
+            <li><strong>Head & Neck Cancer (MRI + CT):</strong> Built a multi-modal tumor segmentation and lymph-node detection pipeline with deformable registration between MRI–CT; achieved oncologist-validated Dice improvements and integrated RT-structure exports (DICOM-RT) to assist radiation therapy planning and target delineation in clinical workflows.</li>
             <li><strong>Breast Imaging (Photon-Counting CT & Conventional CT):</strong> Developed lesion detection and tissue-density quantification using RetinaNet/YOLOv8 for candidate generation and ViT-based classifiers for BI-RADS-style triage; supported second-read decision support and dose/protocol optimization in industry PACS pipelines.</li>
             <li><strong>Anomaly Detection @ Scale:</strong> Deployed self-/weakly-supervised pretraining (SimCLR/MoCo, masked autoencoders) on mixed MRI/CT cohorts to flag out-of-distribution scans (artifacts, motion, protocol mismatch); used for worklist triage and automated QA in hospital imaging networks.</li>
+            <li><strong>Survival Prediction:</strong> Survival Prediction in head and neck cancer based on employing Deep Learning methods such as convolutional neural networks (CNN).</li>
+            
           </ul>
         </li>
         
@@ -459,59 +461,80 @@
         
 
         <h3>MSc Research Assistant — Shahid Beheshti University | 09/2018–01/2021</h3>
-        <ul>
+<ul>
 
-          <li>
-            <strong>Master’s Thesis — FPGA Super-Resolution (SR):</strong>
-            Designed a fixed-point SR pipeline (deblurring → upsampling → refinement) on FPGA, using line buffers/BRAM tiling, DSP slice optimization, and AXI4-Stream DMA. Achieved stable timing closure at video rates; integrated camera input (MIPI/parallel) and LCD/HDMI output for on-device demos.
-          </li>
-          <li>
-            <strong>Real-Time Stereo Vision on FPGA platform:</strong>
-            Built a calibrated dual-camera pipeline (stereo <em>K, D, R, T</em>; rectification) and computed disparity using a
-            <em>graph-cut</em> energy model (E = data + λ·smoothness) with α-expansion/β-swap moves, robust Potts smoothness,
-            and occlusion handling via left–right consistency. Added sub-pixel refinement, median/bilateral filtering, and
-            speckle removal. Converted disparity to metric depth (<em>Z = f·B/d</em>) and reprojected (<em>Q</em> matrix) to a
-            colorized point cloud; downstream steps included plane/RANSAC fitting, normal estimation, and mesh reconstruction
-            (Poisson/Ball-Pivoting) with optional multi-frame alignment via ICP for obstacle/scene understanding. Achieved
-            <strong>real-time performance with high accuracy</strong> through parallelized cost-volume construction, and memory-aware scheduling—targeted for <strong>autonomous vehicle</strong> perception.
-          </li>
+  <li>
+    <strong>Master’s Thesis — FPGA Super-Resolution (SR):</strong>
+    Designed a fixed-point SR pipeline (deblurring → upsampling → refinement) on FPGA, using line buffers/BRAM tiling, DSP slice optimization, and AXI4-Stream DMA. Achieved stable timing closure at video rates; integrated camera input (MIPI/parallel) and LCD/HDMI output for on-device demos.
+  </li>
 
+  <li>
+    <strong>Real-Time Stereo Vision on FPGA platform:</strong>
+    Built a calibrated dual-camera pipeline (stereo <em>K, D, R, T</em>; rectification) and computed disparity using a
+    <em>graph-cut</em> energy model (E = data + λ·smoothness) with α-expansion/β-swap moves, robust Potts smoothness,
+    and occlusion handling via left–right consistency. Added sub-pixel refinement, median/bilateral filtering, and
+    speckle removal. Converted disparity to metric depth (<em>Z = f·B/d</em>) and reprojected (<em>Q</em> matrix) to a
+    colorized point cloud; downstream steps included plane/RANSAC fitting, normal estimation, and mesh reconstruction
+    (Poisson/Ball-Pivoting) with optional multi-frame alignment via ICP for obstacle/scene understanding. Achieved
+    <strong>real-time performance with high accuracy</strong> through parallelized cost-volume construction and memory-aware scheduling—targeted for <strong>autonomous vehicle</strong> perception.
+  </li>
 
-          <li>
-            <strong>FPGA-accelerated iris recognition (embedded vision):</strong>
-            Implemented segmentation (integro-differential/Daugman), normalization, Gabor filtering, and template matching with
-            Hamming distance in fixed-point. Achieved <em>60 FPS</em> at <em>1.8 W</em> with a <em>0.1% error rate</em> via pipelined
-            architectures, resource sharing, and on-chip memory reuse.
-          </li>
-           
-          <li>
-            Built end-to-end lung CT pipelines in MATLAB: DICOM ingestion, resampling, lung/airway preprocessing, and
-            classical ML (SVM/Random Forest with radiomics) alongside CNN baselines (2.5D/3D UNet variants). Implemented
-            cross-validation, class-imbalance handling, and calibration to produce clinician-readable candidate lists.
-          </li>
-        
-          <li>
-            Developed TensorFlow transfer-learning models (ResNet/DenseNet backbones) for breast cancer detection on
-            chest X-rays with explainability (Integrated Gradients) and uncertainty estimates. Standardized CXR
-            preprocessing (de-identification, normalization, bone suppression) and reported FROC/sensitivity@FP consistent
-            with clinical evaluation practices.
-          </li>
-        
-        
-          <li>
-            Collaborated with clinicians/engineers to define labeling protocols, built reproducible training/eval scripts,
-            and packaged models for edge deployment (C/C++/OpenCV) with automated tests and documentation.
-          </li>
-        
-          <li>
-            <strong>Key Skills:</strong> Machine/Deep Learning (MATLAB, TensorFlow), 2D/2.5D/3D CNNs, Radiomics, Explainable AI,
-            Medical Image Processing (CT/CXR, DICOM), FPGA Design (VHDL/Verilog, HLS), Vivado/Quartus, Fixed-Point Quantization,
-            DSP/BRAM optimization, AXI4/DMAs, OpenCV Optimization, Real-time Embedded & Edge Computing.
-          </li>
-        </ul>
+  <li>
+    <strong>FPGA-accelerated iris recognition (embedded vision):</strong>
+    Implemented segmentation (integro-differential/Daugman), normalization, Gabor filtering, and template matching with
+    Hamming distance in fixed-point. Achieved <em>60 FPS</em> at <em>1.8 W</em> with a <em>0.1% error rate</em> via pipelined
+    architectures, resource sharing, and on-chip memory reuse.
+  </li>
+
+  <li>
+    Built end-to-end lung CT pipelines in MATLAB: DICOM ingestion, resampling, lung/airway preprocessing, and
+    classical ML (SVM/Random Forest with radiomics) alongside CNN baselines (2.5D/3D UNet variants). Implemented
+    cross-validation, class-imbalance handling, and calibration to produce clinician-readable candidate lists.
+  </li>
+
+  <li>
+    Developed TensorFlow transfer-learning models (ResNet/DenseNet backbones) for breast cancer detection on
+    chest X-rays with explainability (Integrated Gradients) and uncertainty estimates. Standardized CXR
+    preprocessing (de-identification, normalization, bone suppression) and reported FROC/sensitivity@FP consistent
+    with clinical evaluation practices.
+  </li>
+
+  <li>
+    Collaborated with clinicians/engineers to define labeling protocols, built reproducible training/eval scripts,
+    and packaged models for edge deployment (C/C++/OpenCV) with automated tests and documentation.
+  </li>
+
+  <!-- New: compact list of additional M.Sc. projects -->
+  <li>
+    <strong>Selected Projects (M.Sc.):</strong>
+    <ul>
+      <li><em>Image registration for SR (FPGA-friendly):</em> Registration pipeline tailored to fixed-point and on-chip memory for multi-frame SR (Winter 2021).</li>
+      <li><em>Implementation of LOG filter with new hardware friendly architecture for image enhancement on FPGA platform, Winter 2021 (Winter 2021).</li>
+      <li><em>FPGA-based image compression:</em> DCT/quantization/entropy coding with AXI4-Stream I/O (Fall 2020).</li>
+      <li><em>Canny edge on FPGA (brain tumor borders):</em> Fixed-point gradients/thresholding with line-buffer streaming (Spring 2020).</li>
+      <li><em>Super-Resolution in VHDL:</em> Deblur–upsample–refine SR blocks with BRAM tiling and AXI-Stream I/O (Spring 2020).</li>
+      <li><em>Mano computer in VHDL:</em> Complete educational CPU (datapath + control) simulation/implementation (Fall 2019).</li>
+      <li><em>Real-time stereo vision (VHDL prototype):</em> Early disparity→depth pipeline for AV use (Summer 2019).</li>
+      <li><em>Digital Frequency Synthesizer (DDS):</em> VHDL design with ASIC flow (Spring 2019).</li>
+      <li><em>ASIP for linear interpolation:</em> Domain-specific ISA & micro-architecture derived from Mano computer (Spring 2019).</li>
+      <li><em>UART &amp; SPI controllers:</em> RTL design and verification in VHDL (Fall 2018).</li>
+      <li><em>16-bit adder (180nm, Cadence):</em> Layout-level implementation with DRC/LVS sign-off (Fall 2018).</li>
+      <li><em>Autism-support robot study:</em> Concept exploration and human-factors review (Fall 2018).</li>
+      <li><em>Spin-coater build for nanotech lab:</em> Control, safety interlocks, and process uniformity (Summer 2017).</li>
+      <li><em>Wearable antenna (CST):</em> Compact, body-area resilient antenna modeling (Fall 2016).</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Key Skills:</strong> Machine/Deep Learning (MATLAB, TensorFlow), 2D/2.5D/3D CNNs, Radiomics, Explainable AI,
+    Medical Image Processing (CT/CXR, DICOM), FPGA Design (VHDL/Verilog, HLS), Vivado/Quartus, Fixed-Point Quantization,
+    DSP/BRAM optimization, AXI4/DMAs, OpenCV Optimization, Real-time Embedded &amp; Edge Computing.
+  </li>
+</ul>
+
     <!-- publications -->
     <section id="publications">
-      <h2 class="section-title">Selected publications (3 out of 14 papers)</h2>
+      <h2 class="section-title">Selected publications</h2>
       <ul>
         <li>
           Khaledyan, Donya, <em>et&nbsp;al.</em> “WATUNet: a deep neural network for segmentation of volumetric sweep imaging ultrasound.”
@@ -586,4 +609,3 @@
 
 </body>
 </html>
-
